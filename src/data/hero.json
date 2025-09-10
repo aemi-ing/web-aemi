@@ -1,0 +1,14 @@
+{
+    "titulo": "Soluciones Profesionales en Climatización, Refrigeración y Electricidad",
+    "descripcion": "Especialistas en refrigeración, aires acondicionados y sistemas eléctricos con más de 15 años de experiencia.",
+    "botones": [
+        {
+            "icono": "📞",
+            "texto": "Solicitar Presupuesto"
+        },
+        {
+            "icono": "🔧",
+            "texto": "Ver Servicios"
+        }
+    ]
+}

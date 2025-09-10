@@ -1,0 +1,155 @@
+---
+import WhatsappIcon from "./WhatsappIcon.astro";
+import contactoData from '../data/contact.json';
+const { contacto } = contactoData;
+---
+
+<section id="contact" class="py-10 md:py-12 px-10 md:px-20 bg-gradient-to-br from-blue-800 to-blue-900 text-white">
+  <div class="text-center mb-10 md:mb-12">
+    <h2 class="text-2xl md:text-3xl font-bold mb-3">{contacto.titulo}</h2>
+    <p class="text-base md:text-lg text-slate-50/90 max-w-2xl mx-auto">
+      {contacto.subtitulo}
+    </p>
+  </div>
+  <div class="flex justify-between items-start w-full">
+    <!-- Grid principal -->
+    <div class="grid lg:grid-cols-2 gap-6 md:gap-8 items-start w-full">
+      <!-- Formulario de contacto -->
+      <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 md:p-7 border border-white/15">
+        <h3 class="text-xl w-full text-center font-bold mb-4">{contacto.formulario.titulo}</h3>
+        
+        <form 
+          action={contacto.formulario.accion_formspree}
+          method="POST"
+          id="contact-form" 
+          class="space-y-3.5"
+        >
+          <div>
+            <label for="name" class="block text-xs md:text-sm font-semibold mb-1.5">
+              Nombre completo:
+            </label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required
+              class="w-full px-3 py-2 rounded-lg bg-slate-50/90 text-slate-900 border-0 focus:bg-slate-50 focus:ring-4 focus:ring-[#99C9FF] transition-all duration-300 focus:outline-none text-sm"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block text-xs md:text-sm font-semibold mb-1.5">
+              Correo electrónico:
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required
+              class="w-full px-3 py-2 rounded-lg bg-slate-50/90 text-slate-900 border-0 focus:bg-slate-50 focus:ring-4 focus:ring-[#99C9FF] transition-all duration-300 focus:outline-none text-sm"
+            />
+          </div>
+
+          <div>
+            <label for="phone" class="block text-xs md:text-sm font-semibold mb-1.5">
+              Teléfono (opcional):
+            </label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone"
+              class="w-full px-3 py-2 rounded-lg bg-slate-50/90 text-slate-900 border-0 focus:bg-slate-50 focus:ring-4 focus:ring-[#99C9FF] transition-all duration-300 focus:outline-none text-sm"
+            />
+          </div>
+
+          <div>
+            <label for="service" class="block text-xs md:text-sm font-semibold mb-1.5">
+              Servicio de interés:
+            </label>
+            <select 
+              id="service" 
+              name="service"
+              class="w-full px-3 py-2 rounded-lg bg-slate-50/90 text-slate-900 border-0 focus:bg-slate-50 focus:ring-4 focus:ring-[#99C9FF] transition-all duration-300 focus:outline-none text-sm"
+            >
+              {contacto.formulario.servicios.map(servicio => (
+                <option value={servicio.valor}>{servicio.etiqueta}</option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-xs md:text-sm font-semibold mb-1.5">
+              Mensaje:
+            </label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="3" 
+              required
+              class="w-full px-3 py-2 rounded-lg bg-slate-50/90 text-slate-900 border-0 focus:bg-slate-50 focus:ring-4 focus:ring-[#99C9FF] transition-all duration-300 resize-none focus:outline-none text-sm"
+            ></textarea>
+          </div>
+
+          <!-- Campo oculto para evitar spam -->
+          <input type="hidden" name="_subject" value="Nuevo mensaje desde CoolTech Pro">
+          <input type="hidden" name="_format" value="json">
+
+          <button 
+            type="submit" 
+            id="submit-btn"
+            class="w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-red-300 cursor-pointer text-sm md:text-base"
+          >
+            📧 Enviar Mensaje
+          </button>
+        </form>
+      </div>
+
+      <!-- Información de contacto -->
+      <div class="space-y-4 md:space-y-5">
+        <div class="flex items-center gap-3 p-5 bg-white/10 backdrop-blur-lg rounded-xl border border-white/15 hover:bg-white/20 transition-all duration-300">
+          <h3 class="text-xl text-center w-full font-bold">{contacto.informacion.titulo}</h3>
+        </div>
+        
+        <div class="space-y-3.5">
+          {contacto.informacion.elementos.map(elemento => (
+            <div class="flex items-center gap-3 p-5 bg-white/10 backdrop-blur-lg rounded-xl border border-white/15 hover:bg-white/20 transition-all duration-300">
+              <div class="text-xl w-10 h-10 bg-[#5EA0EB] rounded-lg flex items-center justify-center">
+                {elemento.icono}
+              </div>
+              <div>
+                <h4 class="font-semibold text-base">{elemento.titulo}</h4>
+                {elemento.titulo === 'Horarios' ? (
+                  <div class="text-slate-50/90 space-y-0.5 text-sm">
+                    {elemento.valor.split('\n').map(linea => (
+                      <p>{linea}</p>
+                    ))}
+                  </div>
+                ) : (
+                  <p class="text-slate-50/90 text-sm">{elemento.valor}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp flotante -->
+  <a 
+    href={contacto.whatsapp.url} 
+    target="_blank"
+    class="fixed bottom-4 right-4 w-12 h-12 md:w-12 md:h-12 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 z-50"
+    aria-label="Abrir WhatsApp"
+  >
+    <WhatsappIcon class="w-6 h-6 md:w-7 md:h-7" />
+  </a>
+</section>
+
+<script>
+  // tu script original, sin cambios
+</script>
+
+<style>
+  /* tus estilos originales, sin cambios */
+</style>

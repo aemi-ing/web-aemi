@@ -1,0 +1,105 @@
+---
+const onHome = Astro.url.pathname === '/';
+const anchor = (id: string) => (onHome ? `#${id}` : `/#${id}`);
+
+const navItems = [
+  { name: "Inicio",          url: "/" },
+  { name: "Servicios",       url: anchor("services") },
+  { name: "Galería",         url: anchor("gallery") },
+  { name: "Nosotros",        url: anchor("about") },
+  { name: "Contacto",        url: anchor("contact") },
+];
+---
+
+<header class="top-0 z-50 bg-blue-950 shadow-sm">
+  <div class="container mx-auto px-8 flex justify-between items-center">
+    <a href="/" class="text-2xl font-bold bg-gradient-to-r from-slate-50 via-slate-50 to-slate-50 bg-clip-text text-transparent hover:from-[#00AFF2] hover:via-[#00AFF2] hover:to-[#1D398F] transition-colors">
+      <div class="flex items-center py-4 gap-2">
+        <img src="/favicon.png" alt="AEMI Ingeniería" class="h-10 w-auto" />
+        <h1 class="w-full text-2xl font-bold">AEMI</h1>
+      </div>
+    </a>
+
+    <nav class="hidden md:block">
+      <ul class="flex space-x-8">
+        {navItems.map((item) => (
+          <li>
+            <a
+              href={item.url}
+              class="font-semibold text-slate-300 hover:text-slate-50 transition-colors"
+            >
+              {item.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <button
+      id="mobile-menu-button"
+      class="md:hidden text-slate-300 hover:text-slate-50 cursor-pointer"
+      aria-label="Abrir menú"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <path d="M4 12h16M4 18h16M4 6h16" />
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-slate-900 shadow-md">
+    <nav class="container mx-auto px-4 py-3">
+      <ul class="space-y-3">
+        {navItems.map((item) => (
+          <li>
+            <a
+              href={item.url}
+              class="block font-semibold text-slate-300 hover:text-slate-50 transition-colors"
+            >
+              {item.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Botón para volver arriba -->
+<button
+  id="scrollToTopBtn"
+  class="fixed bottom-18 right-4 z-50 bg-blue-950 text-white rounded-full shadow-lg p-3 transition-opacity duration-300 opacity-0 pointer-events-none hover:bg-blue-700 cursor-pointer"
+  aria-label="Volver arriba"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
+<script>
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+
+  // Mostrar/ocultar botón al hacer scroll
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+  if (scrollToTopBtn) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        scrollToTopBtn.classList.remove("opacity-0", "pointer-events-none");
+        scrollToTopBtn.classList.add("opacity-100", "pointer-events-auto");
+      } else {
+        scrollToTopBtn.classList.add("opacity-0", "pointer-events-none");
+        scrollToTopBtn.classList.remove("opacity-100", "pointer-events-auto");
+      }
+    });
+
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+</script>

@@ -1,0 +1,80 @@
+{
+  "titulo": "Nuestros Servicios",
+  "descripcion": "Ofrecemos soluciones integrales para todas sus necesidades de climatización y electricidad.",
+  "cards": [
+    {
+      "slug": "refrigeracion",
+      "icono": "❄️",
+      "titulo": "Refrigeración",
+      "descripcion": "Instalación, mantenimiento y reparación de sistemas de refrigeración comercial e industrial. Garantizamos la temperatura perfecta para sus productos.",
+      "linkText": "Más información →",
+      "heroImagen": "https://drive.google.com/thumbnail?id=1Q4EbMceHpZ9p99wfeM5KCZrAtL8EdqPp&sz=w1920-h1080",
+      "descripcionLarga": "Instalamos, mantenemos y reparamos sistemas de refrigeración comercial e industrial. Optimizamos consumo energético, aseguramos la cadena de frío y cumplimos normativas.",
+      "galeria": [
+        { "imagen": "https://drive.google.com/thumbnail?id=1YIQgnbkiBO4btTuHWJ4O73iuc8REaT_l&sz=w1920-h1080", "alt": "Cámara de frío", "titulo": "Cámara de frío", "descripcion": "Proyecto retail" },
+        { "imagen": "https://drive.google.com/thumbnail?id=1Q4EbMceHpZ9p99wfeM5KCZrAtL8EdqPp&sz=w1920-h1080", "alt": "Rack compresores", "titulo": "Rack de compresores", "descripcion": "Alta eficiencia" },
+        { "imagen": "https://drive.google.com/thumbnail?id=1cnQCxuypqipIhIFlIRmWKatxqiXKs0YN&sz=w1920-h1080", "alt": "Refrigeración comercial", "titulo": "Refrigeración Comercial", "descripcion": "Soluciones a medida" }
+      ],
+
+
+      "seo": {
+        "title": "Refrigeración | AEMI Ingeniería",
+        "description": "Instalación y mantención de sistemas de refrigeración comercial e industrial."
+      }
+    },
+    {
+      "slug": "aires-acondicionados",
+      "icono": "☁️",
+      "titulo": "Aires Acondicionados",
+      "descripcion": "Instalación y servicio técnico especializado en aires acondicionados de todas las marcas y modelos.",
+      "linkText": "Más información →",
+      "heroImagen": "https://drive.google.com/thumbnail?id=1X1r0UDqytsyZNJixyYzcd5JMjypxtSvo&sz=w1920-h1080",
+      "descripcionLarga": "Venta, instalación y servicio técnico de aires acondicionados tipo muro, cassette, piso-cielo e inverter. Trabajamos con múltiples marcas.",
+      "galeria": [
+        { "imagen": "https://drive.google.com/thumbnail?id=17yT8Cp8hxwU5-q3PtUGRcL3hKWlrcz15&sz=w800-h450", "alt": "Split muro", "titulo": "Split muro", "descripcion": "Instalación limpia" },
+        { "imagen": "https://drive.google.com/thumbnail?id=1wo8mNB5XXmfpkSXchqyyxygfxiLM4Hdw&sz=w1920-h1080", "alt": "Cassette 4 vías", "titulo": "Cassette 4 vías", "descripcion": "Cobertura uniforme" },
+        { "imagen": "https://drive.google.com/thumbnail?id=13zTfkTvBBXm1uC7g_3z_A_g79x56c-v2&sz=w1920-h1080", "alt": "Aire acondicionado piso-cielo", "titulo": "Piso-cielo", "descripcion": "Potencia y discreción" }
+      ],
+      "seo": {
+        "title": "Aires Acondicionados | AEMI Ingeniería",
+        "description": "Instalación y servicio técnico de aire acondicionado."
+      }
+    },
+    {
+      "slug": "climatizacion",
+      "icono": "🌡️",
+      "titulo": "Climatización",
+      "descripcion": "Instalación y Reparación de sistemas de climatización, Ventilación y Extracción de aire.",
+      "linkText": "Más información →",
+      "heroImagen": "https://drive.google.com/thumbnail?id=1LzbwJtz5pkq3oxcdI2Rn4eeUzZ_UeU2C&sz=w1920-h1080",
+      "descripcionLarga": "Proyectos eléctricos domiciliarios e industriales: canalizaciones, tableros, protecciones, iluminación y certificaciones.",
+      "galeria": [
+        { "imagen": "https://drive.google.com/thumbnail?id=1DghQ93bHRU34lb0kt_vyyMQ0ssdPkPz2&sz=w1920-h1080", "alt": "Tablero eléctrico", "titulo": "Tablero general", "descripcion": "Orden y seguridad" },
+        { "imagen": "https://drive.google.com/thumbnail?id=1UlNQ0jTd7gkoRoHWBepIc9L-A-OlOzKS&sz=w1920-h1080", "alt": "Iluminación LED", "titulo": "Iluminación LED", "descripcion": "Eficiencia energética" },
+        { "imagen": "https://drive.google.com/thumbnail?id=10X7jf55TD_CeRC0A7dYa_nm8Q1RFCjUe&sz=w1920-h1080", "alt": "Instalación eléctrica industrial", "titulo": "Instalación Industrial", "descripcion": "Sistemas robustos y seguros" }
+      ],
+      "seo": {
+        "title": "Electricidad | AEMI Ingeniería",
+        "description": "Instalaciones y mantenimiento eléctrico profesional."
+      }
+    },
+    {
+      "slug": "electricidad",
+      "icono": "⚡",
+      "titulo": "Electricidad",
+      "descripcion": "Instalación y Reparación, Electricidad Industrial y Domiciliaria, Tableros eléctricos, Tableros de Distribución y Control, Portones automáticos.",
+      "linkText": "Más información →",
+      "heroImagen": "https://drive.google.com/thumbnail?id=1LzbwJtz5pkq3oxcdI2Rn4eeUzZ_UeU2C&sz=w1920-h1080",
+      "descripcionLarga": "Proyectos eléctricos domiciliarios e industriales: canalizaciones, tableros, protecciones, iluminación y certificaciones.",
+      "galeria": [
+        { "imagen": "https://drive.google.com/thumbnail?id=1DghQ93bHRU34lb0kt_vyyMQ0ssdPkPz2&sz=w1920-h1080", "alt": "Tablero eléctrico", "titulo": "Tablero general", "descripcion": "Orden y seguridad" },
+        { "imagen": "https://drive.google.com/thumbnail?id=1UlNQ0jTd7gkoRoHWBepIc9L-A-OlOzKS&sz=w1920-h1080", "alt": "Iluminación LED", "titulo": "Iluminación LED", "descripcion": "Eficiencia energética" },
+        { "imagen": "https://drive.google.com/thumbnail?id=10X7jf55TD_CeRC0A7dYa_nm8Q1RFCjUe&sz=w1920-h1080", "alt": "Instalación eléctrica industrial", "titulo": "Instalación Industrial", "descripcion": "Sistemas robustos y seguros" }
+      ],
+      "seo": {
+        "title": "Electricidad | AEMI Ingeniería",
+        "description": "Instalaciones y mantenimiento eléctrico profesional."
+      }
+    }
+  ]
+}

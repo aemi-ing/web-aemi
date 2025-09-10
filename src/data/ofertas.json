@@ -1,0 +1,25 @@
+{
+  "habilitado": true,
+  "titulo": "Ofertas Especiales",
+  "promociones": [
+    {
+      "titulo": "Mantenimiento Preventivo",
+      "descripcion": "Servicio completo de mantenimiento para tu sistema de aire acondicionado",
+      "imagen": "https://drive.google.com/thumbnail?id=1cnQCxuypqipIhIFlIRmWKatxqiXKs0YN&sz=w1920-h1080",
+      "precio_oferta": "$17.600"
+    },
+    {
+      "titulo": "Instalación de Aire Split",
+      "descripcion": "Instalación profesional de aire acondicionado split con materiales incluidos",
+      "imagen": "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&h=450&fit=crop",
+      "precio_oferta": "$17.990"
+    },
+    {
+      "titulo": "Reparación Express",
+      "descripcion": "Servicio de reparación rápida para equipos de refrigeración doméstica",
+      "imagen": "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&h=450&fit=crop",
+      "precio_oferta": "$59.990"
+    }
+  ]
+}
+

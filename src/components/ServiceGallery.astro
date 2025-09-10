@@ -1,0 +1,105 @@
+---
+export interface Props {
+  titulo: string;
+  descripcion?: string;
+  items: Array<{ imagen: string; alt?: string; titulo?: string; descripcion?: string }>;
+}
+const { titulo, descripcion, items } = Astro.props as Props;
+---
+
+<section class="py-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-8 reveal" data-reveal-delay="0">
+      <h3 class="text-3xl font-bold text-blue-900">{titulo}</h3>
+      {descripcion && <p class="text-gray-600 mt-2">{descripcion}</p>}
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {items?.map((it, i) => (
+        <figure
+          class="group bg-white rounded-2xl overflow-hidden shadow-md transition
+                 hover:shadow-xl transform hover:-translate-y-1 reveal"
+          data-reveal-delay={String((i % 3) * 120)}
+        >
+          <!-- Wrapper para mantener proporción y evitar layout shift -->
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img
+              src={it.imagen}
+              alt={it.alt || it.titulo || 'Imagen'}
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out
+                     group-hover:scale-[1.05]"
+              loading="lazy"
+              decoding="async"
+            />
+            <!-- Sutil overlay en hover para legibilidad -->
+            <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/15 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+          </div>
+
+          {(it.titulo || it.descripcion) && (
+            <figcaption
+              class="p-4 transition-transform duration-500 ease-out
+                     translate-y-2 opacity-95 group-hover:translate-y-0"
+            >
+              {it.titulo && <h4 class="font-semibold text-blue-900">{it.titulo}</h4>}
+              {it.descripcion && <p class="text-sm text-gray-600 mt-1">{it.descripcion}</p>}
+            </figcaption>
+          )}
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Aparición: fade + slide-up */
+  @keyframes revealFadeUp {
+    from { opacity: 0; transform: translateY(18px) scale(0.98); }
+    to   { opacity: 1; transform: translateY(0)    scale(1); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+    will-change: transform, opacity;
+  }
+  .reveal-visible {
+    animation: revealFadeUp 650ms cubic-bezier(.2,.65,.25,1) forwards;
+  }
+
+  /* Respeta preferencias de movimiento */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-visible {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+</style>
+
+<script>
+  // IntersectionObserver para animar aparición (con stagger vía data-reveal-delay)
+  (function() {
+    const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
+    if (reduce) return;
+
+    const els = document.querySelectorAll('.reveal');
+    if (!els.length || !('IntersectionObserver' in window)) {
+      els.forEach(el => el.classList.add('reveal-visible'));
+      return;
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const delay = Number(el.getAttribute('data-reveal-delay') || 0);
+          (el as HTMLElement).style.animationDelay = `${delay}ms`;
+          el.classList.add('reveal-visible');
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+    els.forEach(el => io.observe(el));
+  })();
+</script>

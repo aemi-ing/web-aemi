@@ -1,0 +1,41 @@
+{
+  "contacto": {
+    "titulo": "Contáctanos",
+    "subtitulo": "Estamos aquí para ayudarte con todas tus necesidades.",
+    "formulario": {
+      "titulo": "Envíanos un mensaje",
+      "accion_formspree": "https://formspree.io/f/mrbldvwq",
+      "servicios": [
+        { "valor": "", "etiqueta": "Seleccionar servicio" },
+        { "valor": "refrigeracion", "etiqueta": "Refrigeración" },
+        { "valor": "climatizacion", "etiqueta": "Climatización" },
+        { "valor": "aires", "etiqueta": "Aires Acondicionados" },
+        { "valor": "electricidad", "etiqueta": "Electricidad" }
+      ]
+    },
+    "informacion": {
+      "titulo": "Información de contacto",
+      "elementos": [
+        {
+          "icono": "📞",
+          "titulo": "Teléfono",
+          "valor": "+56 9 9227 1055"
+        },
+        {
+          "icono": "📧",
+          "titulo": "Email",
+          "valor": "aemiingenieria@gmail.com"
+        },
+        {
+          "icono": "🕒",
+          "titulo": "Horarios",
+          "valor": "Lun - Vie: 8:00 - 18:00\nSáb: 9:00 - 13:00"
+        }
+      ]
+    },
+    "whatsapp": {
+      "numero": "56992271055",
+      "url": "https://wa.me/56992271055"
+    }
+  }
+}

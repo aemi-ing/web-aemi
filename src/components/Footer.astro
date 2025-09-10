@@ -1,0 +1,100 @@
+---
+import infoContacto from '../data/footer.json';
+---
+
+<footer class="text-slate-50 bg-slate-900 pt-12 px-10 md:px-20">
+  <div class="w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16">
+      
+      <!-- Información de la empresa -->
+      <div class="flex flex-col justify-start items-center md:items-start">
+        <div class="flex items-center justify-center md:justify-start mb-4">
+          <img src={infoContacto.empresa.logo} alt={infoContacto.empresa.nombre} class="w-[75%] md:w-[90%]">
+        </div>
+        <p class="text-blue-100 text-center md:text-start text-sm leading-relaxed mb-6">
+          {infoContacto.empresa.descripcion}
+        </p>
+        
+        <!-- Redes sociales -->
+        <div class="flex space-x-4">
+          {infoContacto.redesSociales.map((social) => (
+            <a href={social.enlace} class="w-8 h-8 bg-blue-900 rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors" aria-label={social.nombre}>
+              <i class={`${social.icono} text-sm`}></i>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Nuestros Servicios -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Nuestros Servicios</h4>
+        <ul class="space-y-3">
+          {infoContacto.servicios.map((servicio) => (
+            <li>
+              <a href={servicio.enlace} class="text-blue-100 hover:text-white text-sm transition-colors">
+                {servicio.nombre}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Enlaces Rápidos -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
+        <ul class="space-y-3">
+          {infoContacto.enlacesRapidos.map((enlace) => (
+            <li>
+              <a href={enlace.enlace} class="text-blue-100 hover:text-white text-sm transition-colors">
+                {enlace.nombre}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+        <div class="space-y-3">
+          {infoContacto.contacto.telefonos.map((telefono) => (
+            <div class="flex items-center">
+              <i class={`${telefono.icono} text-[#5EA0EB] w-5`}></i>
+              <a href={telefono.enlace} class="text-blue-100 hover:text-white text-sm ml-3 transition-colors">
+                {telefono.numero}
+              </a>
+            </div>
+          ))}
+          <div class="flex items-center">
+            <i class="fas fa-envelope text-[#5EA0EB] w-5"></i>
+            <a href={infoContacto.contacto.correo.enlace} class="text-blue-100 hover:text-white text-sm ml-3 transition-colors">
+              {infoContacto.contacto.correo.direccion}
+            </a>
+          </div>
+          <div class="flex items-start">
+            <i class="fas fa-clock text-[#5EA0EB] w-5 mt-1"></i>
+            <div class="ml-3">
+              <p class="text-blue-100 text-sm">{infoContacto.contacto.horarios.entresSemana}</p>
+              <p class="text-blue-100 text-sm">{infoContacto.contacto.horarios.sabado}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer bottom -->
+  <div>
+    <div class="max-w-7xl mx-auto px-6 pt-8 md:pt-4 pb-4">
+      <div class="flex flex-col justify-center items-center w-full">
+        <p class="text-blue-200 text-sm text-center md:text-start">
+          {infoContacto.piePagina.copyright}
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+</style>

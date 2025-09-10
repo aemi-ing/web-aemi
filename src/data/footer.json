@@ -1,0 +1,80 @@
+{
+  "empresa": {
+    "nombre": "AEMI Ingeniería",
+    "logo": "/logo.png",
+    "descripcion": "Proveedor único de soluciones integrales en refrigeración, climatización y electricidad. Desde diseño hasta mantenimiento, respaldados por profesionales especializados."
+  },
+  "redesSociales": [
+    {
+      "nombre": "Facebook",
+      "icono": "fab fa-facebook-f",
+      "enlace": "https://facebook.com/aemi-ingenieria"
+    },
+    {
+      "nombre": "WhatsApp",
+      "icono": "fab fa-whatsapp",
+      "enlace": "https://wa.me/56992271055"
+    }
+  ],
+  "servicios": [
+    {
+      "nombre": "Refrigeración",
+      "enlace": "/servicios/refrigeracion"
+    },
+    {
+      "nombre": "Climatización",
+      "enlace": "/servicios/climatizacion"
+    },
+    {
+      "nombre": "Aires Acondicionados",
+      "enlace": "/servicios/aires-acondicionados"
+    },
+    {
+      "nombre": "Electricidad",
+      "enlace": "/servicios/electricidad"
+    }
+  ],
+  "enlacesRapidos": [
+    {
+      "nombre": "Inicio",
+      "enlace": "/"
+    },
+    {
+      "nombre": "Servicios",
+      "enlace": "/#services"
+    },
+    {
+      "nombre": "Nosotros",
+      "enlace": "/#about"
+    },
+    {
+      "nombre": "Galería",
+      "enlace": "/#gallery"
+    },
+    {
+      "nombre": "Contacto",
+      "enlace": "/#contact"
+    }
+  ],
+  "contacto": {
+    "telefonos": [
+      {
+        "tipo": "movil",
+        "icono": "fas fa-mobile-alt",
+        "numero": "+56 9 9227 1055",
+        "enlace": "tel:+56992271055"
+      }
+    ],
+    "correo": {
+      "direccion": "aemiingenieria@gmail.com",
+      "enlace": "mailto:aemiingenieria@gmail.com"
+    },
+    "horarios": {
+      "entresSemana": "Lun - Vie: 8:00 AM - 6:00 PM",
+      "sabado": "Sáb: 9:00 AM - 2:00 PM"
+    }
+  },
+  "piePagina": {
+    "copyright": "© 2025 AEMI Ingeniería. Todos los derechos reservados."
+  }
+}

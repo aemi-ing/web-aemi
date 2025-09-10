@@ -1,0 +1,62 @@
+{
+    "titulo": "Sobre Nosotros",
+    "descripcion": [
+        {
+            "texto1": "Somos un proveedor único de soluciones integrales en ",
+            "resaltado1": "Cámaras de Frio, Aires acondicionados, Refrigeración Y Climatización, ",
+            "texto2": "ofrecemos desde diseño de proyectos, selección, suministro e instalación de sistemas hasta servicios de mantenimiento preventivo y/o correctivo, respaldados por nuestros",
+            "resaltado2": "profesionales en el área y un amplio stock de equipos."
+        },
+        {
+            "texto1": "Somos ",
+            "resaltado1": "AEMI ingeniería, ",
+            "texto2": "empresa de ",
+            "resaltado2": "proyectos de Ingeniería, suministro, instalación y servicio de sistemas de Aire Acondicionado, Refrigeración, Climatización, Electricidad y Obras Civiles asociadas."
+        }
+    ],
+    "filosofia": {
+        "titulo": "Nuestra Filosofía",
+        "mision": {
+            "icono": "🎯",
+            "titulo": "Nuestra Misión",
+            "descripcion": "Transformamos sus requerimientos en soluciones integrales con experticia y solidez, llevando a cabo sus más específicas solicitudes."
+        },
+        "valores": {
+            "icono": "💎",
+            "titulo": "Nuestros Valores",
+            "lista": [
+                "Compromiso",
+                "Responsabilidad",
+                "Profesionalismo",
+                "Excelencia"
+            ]
+        },
+        "vision": {
+            "icono": "🌟",
+            "titulo": "Nuestra Visión",
+            "resaltado1": "Ser una empresa pionera en el rubro, ",
+            "descripcion": "líder en el mercado, llegando a diversos lugares de las ",
+            "resaltado2": "regiones VI, VII, VIII",
+            "tags": [
+                "Liderazgo",
+                "Expansión",
+                "Pioneros"
+            ]
+        },
+        "estadisticas": [
+            {
+                "valor": "15+",
+                "texto": "Años de Experiencia"
+            },
+            {
+                "valor": "30+",
+                "texto": "Clientes Satisfechos"
+            },
+            {
+                "valor": "100%",
+                "texto": "Garantía en Trabajos"
+            }
+        
+        ]
+    }
+}

@@ -1,0 +1,42 @@
+{
+  "titulo": "Nuestra Galería",
+  "descripcion": "Conoce algunos de nuestros proyectos más destacados en refrigeración, climatización y electricidad.",
+  "slides": [
+    {
+      "imagen": "https://drive.google.com/thumbnail?id=1cnQCxuypqipIhIFlIRmWKatxqiXKs0YN&sz=w1920-h1080",
+      "alt": "Sistema de refrigeración comercial",
+      "titulo": "Sistema de Refrigeración Comercial",
+      "descripcion": "Instalación completa para supermercado con tecnología de última generación"
+    },
+    {
+      "imagen": "https://drive.google.com/thumbnail?id=1wo8mNB5XXmfpkSXchqyyxygfxiLM4Hdw&sz=w1920-h1080",
+      "alt": "Aire acondicionado industrial",
+      "titulo": "Climatización Industrial",
+      "descripcion": "Sistema HVAC para planta manufacturera de 2000m²"
+    },
+    {
+      "imagen": "https://drive.google.com/thumbnail?id=1LzbwJtz5pkq3oxcdI2Rn4eeUzZ_UeU2C&sz=w1920-h1080",
+      "alt": "Instalación eléctrica",
+      "titulo": "Instalación Eléctrica Especializada",
+      "descripcion": "Sistemas eléctricos para equipos de refrigeración y climatización"
+    },
+    {
+      "imagen": "https://drive.google.com/thumbnail?id=1X1r0UDqytsyZNJixyYzcd5JMjypxtSvo&sz=w1920-h1080",
+      "alt": "Mantenimiento preventivo",
+      "titulo": "Mantenimiento Preventivo",
+      "descripcion": "Servicios técnicos especializados para garantizar el óptimo funcionamiento"
+    },
+    {
+      "imagen": "https://drive.google.com/thumbnail?id=1iMIY594FCsX10bizFtCsA5fet-F_3iL_&sz=w1920-h1080",
+      "alt": "Aires acondicionados",
+      "titulo": "Aires Acondicionados",
+      "descripcion": "Instalación de sistemas de climatización para oficinas y comercios"
+    },
+    {
+      "imagen": "https://drive.google.com/thumbnail?id=1NH5wI1G9xO3WfDYu3rvt6Mtu_0sFqXpS&sz=w1920-h1080",
+      "alt": "Automovil de la empresa",
+      "titulo": "Infraestructura ",
+      "descripcion": "Automovil utilizado por la empresa para servicios"
+    }
+  ]
+}

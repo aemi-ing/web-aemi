@@ -1,0 +1,195 @@
+---
+import data from "../data/sobre-nosotros.json";
+---
+
+<section
+  id="about"
+  class="relative overflow-hidden mx-auto px-10 md:px-20 w-full py-16
+         bg-[url('/fondo.jpg')] bg-cover bg-center bg-fixed"
+>
+  <!-- Capa blanca translúcida -->
+  <div class="absolute inset-0 bg-white/70 pointer-events-none"></div>
+
+  <!-- Grid principal -->
+  <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10">
+    <div class="order-1 space-y-4 lg:space-y-6">
+      <!-- Encabezado -->
+      <div class="space-y-3 w-full flex flex-col justify-center items-start">
+        <h2 class="text-4xl text-center w-full md:text-start font-bold text-blue-900 leading-tight">
+          {data.titulo}
+        </h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mx-auto md:mx-0"></div>
+      </div>
+
+      <!-- Descripción -->
+      <div class="space-y-4 text-gray-600 leading-relaxed">
+        {
+          data.descripcion.map((parrafo) => (
+            <p class="text-lg">
+              {parrafo.texto1}
+              <span class="font-semibold text-blue-900">{parrafo.resaltado1}</span>
+              {parrafo.texto2}
+              <span class="font-semibold text-blue-900">{parrafo.resaltado2}</span>
+            </p>
+          ))
+        }
+      </div>
+    </div>
+
+    <!-- Imagen -->
+    <div class="order-2 flex justify-center lg:justify-end">
+      <div class="relative w-full max-w-md lg:max-w-lg xl:max-w-xl">
+        <div class="relative group">
+          <div class="relative overflow-hidden rounded-3xl shadow-2xl transform transition-all duration-500 hover:scale-101">
+            <img
+              src="https://drive.google.com/thumbnail?id=10pIM05bKSi2RW9cu3XHqasKHwK8HTyVU&sz=w1920-h1080"
+              alt="AEMI Ingeniería - Sistemas de Climatización y Refrigeración"
+              class="w-full h-64 sm:h-80 lg:h-96 object-cover transition-transform duration-700 group-hover:scale-102"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-transparent"></div>
+            <!-- <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full shadow-lg">
+              <span class="text-blue-900 font-semibold text-xs sm:text-sm">AEMI Ingeniería</span>
+            </div> -->
+          </div>
+          <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-400/10 via-purple-400/10 to-orange-400/10 blur-xl opacity-50 -z-10 transform scale-110 group-hover:opacity-70 transition-opacity duration-500"></div>
+          <div class="absolute -top-2 -right-2 w-4 h-4 bg-orange-400 rounded-full animate-pulse"></div>
+          <div class="absolute -bottom-2 -left-2 w-3 h-3 bg-blue-500 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Bloque 2: Nuestra Filosofía === -->
+  <section class="py-16 relative z-10">
+    <div class="text-center mb-8 lg:mb-12">
+      <h2 class="text-4xl font-bold text-blue-900 mb-4">{data.filosofia.titulo}</h2>
+      <div class="w-16 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mx-auto"></div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+      <!-- Misión -->
+      <div class="bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 reveal" data-reveal-delay="0">
+        <div class="text-center mb-6">
+          <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <span class="text-xl">{data.filosofia.mision.icono}</span>
+          </div>
+          <h3 class="text-xl lg:text-2xl font-bold text-blue-900">{data.filosofia.mision.titulo}</h3>
+        </div>
+        <p class="text-gray-600 leading-relaxed text-sm lg:text-base text-center">{data.filosofia.mision.descripcion}</p>
+      </div>
+
+      <!-- Valores -->
+      <div class="bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 reveal" data-reveal-delay="100">
+        <div class="text-center mb-6">
+          <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <span class="text-xl">{data.filosofia.valores.icono}</span>
+          </div>
+          <h3 class="text-xl lg:text-2xl font-bold text-blue-900">{data.filosofia.valores.titulo}</h3>
+        </div>
+        <div class="space-y-3">
+          {data.filosofia.valores.lista.map((valor) => (
+            <div class="text-center">
+              <h4 class="font-semibold text-blue-900 mb-1 text-sm lg:text-base">{valor}</h4>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Visión -->
+      <div class="bg-white rounded-3xl p-6 lg:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 reveal" data-reveal-delay="200">
+        <div class="text-center mb-6">
+          <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+            <span class="text-xl">{data.filosofia.vision.icono}</span>
+          </div>
+          <h3 class="text-xl lg:text-2xl font-bold text-blue-900">{data.filosofia.vision.titulo}</h3>
+        </div>
+        <p class="text-gray-600 leading-relaxed text-sm lg:text-base text-center mb-4">
+          <span class="font-semibold text-blue-900">{data.filosofia.vision.resaltado1}</span>
+          {data.filosofia.vision.descripcion}
+          <span class="font-semibold text-blue-900">{data.filosofia.vision.resaltado2}</span>
+        </p>
+        <div class="flex flex-wrap justify-center gap-2">
+          {data.filosofia.vision.tags.map((tag) => (
+            <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">{tag}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Estadísticas -->
+    <div class="mt-12 lg:mt-16">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        {data.filosofia.estadisticas.map((item, idx) => (
+          <div class="text-center bg-white rounded-2xl p-6 lg:p-8 shadow-md hover:shadow-lg transition-all duration-300 reveal" data-reveal-delay={String(100 * (idx % 3))}>
+            <div class="text-3xl lg:text-4xl font-bold text-blue-900 mb-2">{item.valor}</div>
+            <div class="text-gray-600 text-sm lg:text-base">{item.texto}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</section>
+
+<style>
+  /* Animación de aparición */
+  @keyframes revealFadeUp {
+    from { opacity: 0; transform: translateY(24px) scale(0.98); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+    will-change: transform, opacity;
+  }
+
+  .reveal-visible {
+    animation: revealFadeUp 700ms cubic-bezier(.2,.65,.25,1) forwards;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal-visible {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<script>
+  // IntersectionObserver para animaciones reveal
+  (function() {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) return;
+
+    const items = document.querySelectorAll('.reveal');
+    if (!items.length || !('IntersectionObserver' in window)) {
+      items.forEach(el => el.classList.add('reveal-visible'));
+      return;
+    }
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const delay = Number(el.getAttribute('data-reveal-delay') || 0);
+          (el as HTMLElement).style.animationDelay = `${delay}ms`;
+          el.classList.add('reveal-visible');
+          io.unobserve(el);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -10% 0px',
+      threshold: 0.15
+    });
+
+    items.forEach(el => io.observe(el));
+  })();
+</script>

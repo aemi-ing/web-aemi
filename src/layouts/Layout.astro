@@ -1,0 +1,67 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Head from "../components/Head.astro";
+
+const { title, description, showHero = false } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <Head title={title} description={description} />
+  </head>
+  <body class="text-slate-900">
+    <Navbar />
+
+    {
+      showHero ? (
+        <main class="relative z-10">
+          <slot />
+        </main>
+      ) : (
+        <main class="relative z-10 container mx-auto px-4 py-8">
+          <slot />
+        </main>
+      )
+    }
+
+    <Footer />
+
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+  }
+</style>
+
+<script>
+  // Navegación suave para todos los enlaces con #
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", (e) => {
+        e.preventDefault();
+        const href = anchor.getAttribute("href");
+        if (href) {
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        }
+      });
+    });
+  });
+</script>
