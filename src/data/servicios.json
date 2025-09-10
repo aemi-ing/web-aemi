@@ -47,10 +47,10 @@
       "titulo": "Climatización",
       "descripcion": "Instalación y Reparación de sistemas de climatización, Ventilación y Extracción de aire.",
       "linkText": "Más información →",
-      "heroImagen": "https://drive.google.com/thumbnail?id=1LzbwJtz5pkq3oxcdI2Rn4eeUzZ_UeU2C&sz=w1920-h1080",
+      "heroImagen": "https://drive.google.com/thumbnail?id=1RbbllDQbtIzc35oK-RCsDirIIevDF-hd&sz=w1920-h1080",
       "descripcionLarga": "Proyectos eléctricos domiciliarios e industriales: canalizaciones, tableros, protecciones, iluminación y certificaciones.",
       "galeria": [
-        { "imagen": "https://drive.google.com/thumbnail?id=1DghQ93bHRU34lb0kt_vyyMQ0ssdPkPz2&sz=w1920-h1080", "alt": "Tablero eléctrico", "titulo": "Tablero general", "descripcion": "Orden y seguridad" },
+        { "imagen": "https://drive.google.com/thumbnail?id=1zMepFM4ohUWONzp3Vi1CRp_tU-8MqAqF&sz=w1920-h1080", "alt": "", "titulo": "Sala de calefacción (Calderas)", "descripcion": "" },
         { "imagen": "https://drive.google.com/thumbnail?id=1UlNQ0jTd7gkoRoHWBepIc9L-A-OlOzKS&sz=w1920-h1080", "alt": "Iluminación LED", "titulo": "Iluminación LED", "descripcion": "Eficiencia energética" },
         { "imagen": "https://drive.google.com/thumbnail?id=10X7jf55TD_CeRC0A7dYa_nm8Q1RFCjUe&sz=w1920-h1080", "alt": "Instalación eléctrica industrial", "titulo": "Instalación Industrial", "descripcion": "Sistemas robustos y seguros" }
       ],
