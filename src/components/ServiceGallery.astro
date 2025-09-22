@@ -2,9 +2,10 @@
 export interface Props {
   titulo: string;
   descripcion?: string;
-  items: Array<{ imagen: string; alt?: string; titulo?: string; descripcion?: string }>;
+  linkVideo?: string;
+  items: Array<{ imagen?: string; video?: string; alt?: string; titulo?: string; descripcion?: string }>;
 }
-const { titulo, descripcion, items } = Astro.props as Props;
+const { titulo, descripcion, linkVideo, items } = Astro.props as Props;
 ---
 
 <section class="py-12">
@@ -23,14 +24,19 @@ const { titulo, descripcion, items } = Astro.props as Props;
         >
           <!-- Wrapper para mantener proporción y evitar layout shift -->
           <div class="relative aspect-[4/3] overflow-hidden">
-            <img
-              src={it.imagen}
-              alt={it.alt || it.titulo || 'Imagen'}
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out
-                     group-hover:scale-[1.05]"
-              loading="lazy"
-              decoding="async"
-            />
+            {it.video && (
+              <lite-youtube params="controls=0&loop=1&mute=1" autoload videoid={it.video}></lite-youtube>
+            )}
+            {it.imagen && (
+              <img
+                src={it.imagen}
+                alt={it.alt ?? it.titulo ?? 'Imagen del servicio'}
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+                loading="lazy"
+                decoding="async"
+              />
+            )}
+
             <!-- Sutil overlay en hover para legibilidad -->
             <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/15 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
           </div>
@@ -102,4 +108,8 @@ const { titulo, descripcion, items } = Astro.props as Props;
 
     els.forEach(el => io.observe(el));
   })();
+</script>
+
+<script>
+import '@justinribeiro/lite-youtube';
 </script>
