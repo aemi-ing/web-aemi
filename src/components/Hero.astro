@@ -4,12 +4,12 @@ import ofertas from "../data/ofertas.json";
 
 // URL directa de tu imagen en Google Drive
 const driveBg =
-  "https://drive.google.com/thumbnail?id=1iMIY594FCsX10bizFtCsA5fet-F_3iL_&sz=w1920-h1080";
+  "/imagen_presentacion.png";
 ---
 
 <section
   id="index"
-  class="hero min-h-screen flex items-center justify-center text-center text-slate-50 relative overflow-hidden"
+  class="min-h-screen flex items-center justify-center text-center text-slate-50 relative overflow-hidden"
 >
   <!-- 1) Imagen fija de fondo -->
   <div
@@ -44,21 +44,48 @@ const driveBg =
 
   <!-- Contenido principal -->
   <div
-    class="hero-content relative z-10 px-10 md:px-20 w-full md:max-w-7xl mx-auto animate-fade-in-up"
+    class="flex flex-col h-full justify-start z-10 px-10 md:px-20 w-full md:max-w-7xl mx-auto animate-fade-in-up"
   >
-    <!-- Título -->
-    <h1
+   
+  <!--   <h1
       class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight animate-fade-in-up"
     >
       {hero.titulo}
-    </h1>
+    </h1>-->
 
-    <!-- Párrafo -->
-    <p
+   
+
+    
+  <div class="flex justify-center items-center px-6 py-12 bg-transparent">
+  
+  <!-- Contenido del logo -->
+  <div class="flex items-center gap-6">
+    
+    <!-- Favicon alineado a la altura del texto -->
+    <img src="/favicon.png" alt="Logo AEMI" class="h-[160px] w-auto object-contain">
+
+    <!-- Bloque de texto -->
+    <div class="leading-[1.10] font-extrabold text-left">
+      <div class="text-[68px] tracking-tight">
+        <span class="text-[#003B84]">AEMI</span>
+      </div>
+      <div class="h-[3px] w-full bg-[#003B84] my-2"></div>
+      <div class="text-[68px] tracking-tight -mt-3">
+        <span class="text-[#00AEEF]">INGENIERĪA</span>
+      </div>
+      <div class="text-[20px] text-[#003B84] uppercase tracking-wide font-bold">
+        Expertos en refrigeración y aires acondicionados.
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+ <p
       class="text-lg md:text-2xl mb-6 sm:mb-8 md:mb-10 lg:mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animation-delay-200"
     >
       {hero.descripcion}
-    </p>
+    </p> 
 
     <!-- Botones -->
     <div
@@ -290,9 +317,9 @@ const driveBg =
   }
 
   /* Capa 2: Gradiente (tu look azul) */
-  .hero-bg-gradient {
-    background: linear-gradient(135deg, rgba(30,60,114,0.88), rgba(42,82,152,0.88));
-    mix-blend-mode: multiply;          /* mezcla suave con la foto */
+    .hero-bg-gradient {
+    background-color: rgba(255, 255, 255, 0.30);  /* Blanco con 70% opacidad */
+    mix-blend-mode: normal;                       /* Sin mezcla especial */
   }
 
   /* Capa 3: Arte (bokeh + SVG) */
@@ -309,11 +336,7 @@ const driveBg =
     filter: blur(2px);
   }
 
-  /* —— AJUSTES: quitamos imagen inline previa del .hero —— */
-  .hero {
-    background-image: none;            /* anulamos el fondo antiguo */
-    background-attachment: initial;
-  }
+
 
   /* —— Animaciones que ya tenías —— */
   @keyframes fadeInUp {
@@ -362,10 +385,7 @@ const driveBg =
   @media (max-width: 375px) {
     .btn-primary, .btn-secondary, .btn-promociones { font-size: 0.8rem; padding: 0.7rem 1.2rem; }
   }
-  @media screen and (max-height: 500px) and (orientation: landscape) {
-    .hero-content h1 { font-size: 2rem; margin-bottom: 1rem; }
-    .hero-content p { font-size: 1rem; margin-bottom: 1.5rem; }
-  }
+ 
 </style>
 
 <script>
