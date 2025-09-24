@@ -1,112 +1,98 @@
 ---
+import '@fontsource-variable/raleway';
 import hero from "../data/hero.json";
 import ofertas from "../data/ofertas.json";
 
 // URL directa de tu imagen en Google Drive
-const driveBg =
-  "/imagen_presentacion.png";
+const driveBg = "/imagen_presentacion.png";
 ---
 
-<section
-  id="index"
-  class="min-h-screen flex items-center justify-center text-center text-slate-50 relative overflow-hidden"
->
-  <!-- 1) Imagen fija de fondo -->
+<section id="index" class="min-h-screen flex items-center justify-center text-center text-slate-50 relative overflow-hidden">
+  
+  <!-- Imagen de fondo -->
   <div
     class="hero-bg-image absolute inset-0 -z-10"
     style={`background-image:url('${driveBg}');`}
     aria-hidden="true"
   ></div>
 
-  <!-- 2) Gradiente azul para mantener la identidad -->
+  <!-- Fondo Transparente -->
   <div class="hero-bg-gradient absolute inset-0 -z-10" aria-hidden="true"></div>
 
-  <!-- 3) Arte por encima (bokeh + círculos SVG) -->
-  
-
-  <!-- Banner de promoción flotante - Solo si hay ofertas -->
-  {ofertas.habilitado && (
-    <div
-      class="absolute top-12 left-1/2 z-20 animate-bounce-slow w-full flex justify-center"
-    >
-      <a
-        href="#ofertas"
-        class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full shadow-lg text-sm font-semibold flex items-center gap-2 hover:scale-105 transition-transform cursor-pointer scroll-smooth-link"
-      >
-        <div class="flex justify-center items-center">
-          <span class="animate-pulse translate-3 text-xl">🔥</span>
-        </div>
-        <span>¡Ofertas Especiales Disponibles!</span>
-        <span class="text-xs bg-white text-orange-500 px-2 py-1 rounded-full">VER</span>
-      </a>
-    </div>
-  )}
-
   <!-- Contenido principal -->
-  <div
-    class="flex flex-col h-full justify-start z-10 px-10 md:px-20 w-full md:max-w-7xl mx-auto animate-fade-in-up"
-  >
-   
-  <!--   <h1
-      class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight animate-fade-in-up"
-    >
-      {hero.titulo}
-    </h1>-->
+  <div class="flex flex-col h-screen justify-start px-10 md:px-20 z-10 w-full animate-fade-in-up">
 
-   
-
-    
-  <div class="flex justify-center items-center px-6 py-12 bg-transparent">
-  
-  <!-- Contenido del logo -->
-  <div class="flex items-center gap-6">
-    
-    <!-- Favicon alineado a la altura del texto -->
-    <img src="/favicon.png" alt="Logo AEMI" class="h-[160px] w-auto object-contain">
-
-    <!-- Bloque de texto -->
-    <div class="leading-[1.10] font-extrabold text-left">
-      <div class="text-[68px] tracking-tight">
-        <span class="text-[#003B84]">AEMI</span>
-      </div>
-      <div class="h-[3px] w-full bg-[#003B84] my-2"></div>
-      <div class="text-[68px] tracking-tight -mt-3">
-        <span class="text-[#00AEEF]">INGENIERĪA</span>
-      </div>
-      <div class="text-[20px] text-[#003B84] uppercase tracking-wide font-bold">
-        Expertos en refrigeración y aires acondicionados.
-      </div>
-    </div>
-  </div>
-</div>
-
-  
- <p
-      class="text-lg md:text-2xl mb-6 sm:mb-8 md:mb-10 lg:mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animation-delay-200"
-    >
-      {hero.descripcion}
-    </p> 
-
-    <!-- Botones -->
-    <div
-      class="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center w-full animate-fade-in-up animation-delay-400"
-    >
-      <a
-        href="#contact"
-        class="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-slate-50 font-semibold rounded-full transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl text-sm sm:text-base md:text-lg"
+    <!-- Banner de promoción flotante - Solo si hay ofertas -->
+    {ofertas.habilitado && (
+      <div
+        class="absolute top-8 left-1/2 z-20 animate-bounce-slow w-full flex justify-center"
       >
-        <span class="text-lg sm:text-xl">{hero.botones[0].icono}</span>
-        <span class="whitespace-nowrap">{hero.botones[0].texto}</span>
-      </a>
+        <a
+          href="#ofertas"
+          class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full shadow-lg text-sm font-semibold flex items-center gap-2 hover:scale-105 transition-transform cursor-pointer scroll-smooth-link"
+        >
+          <div class="flex justify-center items-center">
+            <span class="animate-pulse translate-3 text-xl">🔥</span>
+          </div>
+          <span>¡Ofertas Especiales Disponibles!</span>
+          <span class="text-xs bg-white text-orange-500 px-2 py-1 rounded-full">VER</span>
+        </a>
+      </div>
+    )}
 
-      <a
-        href="#services"
-        class="btn-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-transparent text-slate-50 font-semibold rounded-full border-2 border-slate-50 transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl hover:bg-slate-50 hover:text-blue-900 text-sm sm:text-base md:text-lg"
+    <div class="flex flex-col justify-center items-center py-18 gap-20">
+    
+      <!-- Contenido del logo -->
+      <div class="flex items-center gap-2 md:gap-4">
+        <!-- Icono del Logo -->
+        <img src="/favicon.png" alt="Logo AEMI" class="hidden md:block h-20 md:h-full w-auto object-contain">
+
+        <!-- Texto del Logo -->
+        <div class="leading-none font-black text-left font-raleway">
+          <div class="text-4xl md:text-7xl -mb-2">
+            <span class="text-[#003B84]">AEMI</span>
+          </div>
+          <div class="h-[3px] w-full bg-[#003B84] my-2"></div>
+          <div class="text-4xl md:text-7xl -ml-[1px] md:-ml-[3px] -mt-[7px] md:-mt-[3px]">
+            <span class="text-[#00AEEF]">INGENIERĪA</span>
+          </div>
+          <div class="text-[10px] md:text-[20px] text-[#003B84] uppercase font-extrabold text-nowrap">
+            Expertos en refrigeración y aires acondicionados.
+          </div>
+        </div>
+      </div>
+
+      <!-- <h1
+        class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight animate-fade-in-up"
       >
-        <span class="text-lg sm:text-xl">{hero.botones[1].icono}</span>
-        <span class="whitespace-nowrap">{hero.botones[1].texto}</span>
-      </a>
+        {hero.titulo}
+      </h1> -->
+    
+      <!-- <p class="font-raleway font-bold text-lg text-[#003B84] md:text-2xl max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
+        {hero.descripcion}
+      </p>
+ -->
+      <!-- Botones -->
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center w-full animate-fade-in-up animation-delay-400">
+        <a
+          href="#contact"
+          class="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-slate-50 font-semibold rounded-full transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl text-sm sm:text-base md:text-lg"
+        >
+          <span class="text-lg sm:text-xl">{hero.botones[0].icono}</span>
+          <span class="whitespace-nowrap">{hero.botones[0].texto}</span>
+        </a>
+
+        <a
+          href="#services"
+          class="btn-secondary w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 bg-slate-50 text-blue-900 font-semibold rounded-full transition-all duration-300 hover:transform hover:-translate-y-1 hover:shadow-2xl hover:bg-slate-200 hover:text-blue-900 text-sm sm:text-base md:text-lg"
+        >
+          <span class="text-lg sm:text-xl">{hero.botones[1].icono}</span>
+          <span class="whitespace-nowrap">{hero.botones[1].texto}</span>
+        </a>
+      </div>
+
     </div>
+
   </div>
 
   <!-- Modal/Panel de Promociones - Solo si hay ofertas -->
@@ -304,6 +290,11 @@ const driveBg =
 </section>
 
 <style>
+
+  .font-raleway {
+    font-family: 'Raleway Variable', sans-serif;
+  }
+
   /* —— NUEVAS CAPAS DE FONDO —— */
 
   /* Capa 1: Foto fija */
@@ -311,15 +302,14 @@ const driveBg =
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;      /* efecto sutil parallax en desktop */
+    background-attachment: fixed;
     filter: saturate(1.05) contrast(1.02) brightness(0.9);
-    transform: translateZ(0);          /* hint GPU */
+    transform: translateZ(0);
   }
 
   /* Capa 2: Gradiente (tu look azul) */
     .hero-bg-gradient {
-    background-color: rgba(255, 255, 255, 0.30);  /* Blanco con 70% opacidad */
-    mix-blend-mode: normal;                       /* Sin mezcla especial */
+    background-color: rgba(255, 255, 255, 0.30);
   }
 
   /* Capa 3: Arte (bokeh + SVG) */
@@ -335,9 +325,6 @@ const driveBg =
       radial-gradient(200px 200px at 70% 70%, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 60%);
     filter: blur(2px);
   }
-
-
-
   /* —— Animaciones que ya tenías —— */
   @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
@@ -376,7 +363,7 @@ const driveBg =
 
   /* Responsive */
   @media (max-width: 640px) {
-    .hero-bg-image { background-attachment: scroll; } /* rendimiento en móviles */
+    .hero-bg-image { background-attachment: scroll; }
     .hero { min-height: 100vh; min-height: 100dvh; }
   }
   @media (max-width: 480px) {
@@ -385,11 +372,9 @@ const driveBg =
   @media (max-width: 375px) {
     .btn-primary, .btn-secondary, .btn-promociones { font-size: 0.8rem; padding: 0.7rem 1.2rem; }
   }
- 
 </style>
 
 <script>
-
   function togglePromociones() {
     const panel = document.getElementById("promocionesPanel");
     if (panel) {

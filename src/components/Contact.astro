@@ -1,5 +1,4 @@
 ---
-import WhatsappIcon from "./WhatsappIcon.astro";
 import contactoData from '../data/contact.json';
 const { contacto } = contactoData;
 ---
@@ -134,22 +133,4 @@ const { contacto } = contactoData;
       </div>
     </div>
   </div>
-
-  <!-- WhatsApp flotante -->
-  <a 
-    href={contacto.whatsapp.url} 
-    target="_blank"
-    class="fixed bottom-4 right-4 w-12 h-12 md:w-12 md:h-12 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 z-50"
-    aria-label="Abrir WhatsApp"
-  >
-    <WhatsappIcon class="w-6 h-6 md:w-7 md:h-7" />
-  </a>
 </section>
-
-<script>
-  // tu script original, sin cambios
-</script>
-
-<style>
-  /* tus estilos originales, sin cambios */
-</style>
