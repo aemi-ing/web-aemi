@@ -5,36 +5,35 @@ import ofertas from "../data/ofertas.json";
 {ofertas.habilitado && (
   <section id="ofertas" class="py-16 bg-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-      <!-- Título de la sección -->
+      {/* Título de la sección con subrayado */}
       <div class="text-center mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">
-          {ofertas.titulo}
-        </h2>
+        <h2 class="text-3xl sm:text-4xl font-bold text-blue-900 mb-4">{ofertas.titulo}</h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mx-auto"></div>
       </div>
 
-      <!-- Grid de ofertas minimalista -->
-      <div class="flex flex-wrap gap-16 justify-center items-start ">
+      {/* Grid de ofertas minimalista con borde y sombra */}
+      <div class="flex flex-wrap gap-16 justify-center items-start">
         {ofertas.promociones.map((oferta) => (
-          <div class="flex flex-col justify-center gap-8 items-center w-[360px] text-center">
-            <!-- Imagen -->
-            <div class="w-full">
+          <div class="flex flex-col justify-center gap-6 items-center w-[360px] text-center bg-white border border-gray-200 rounded-2xl p-4 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            
+            {/* Imagen */}
+            <div class="w-full overflow-hidden rounded-lg">
               <img 
                 src={oferta.imagen} 
                 alt={oferta.titulo}
-                class="w-full h-100 object-cover rounded-lg"
+                class="w-full h-100 object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
-            <div class="">
-              <!-- Precio -->
-              <div class="text-2xl font-bold text-orange-600 mb-2 ">
+
+            {/* Precio y descripción */}
+            <div>
+              <div class="text-2xl font-bold text-orange-600 mb-2">
                 {oferta.precio_oferta}
               </div>
-              
-              <!-- Descripción -->
               <p class="text-gray-600 text-sm">
                 {oferta.descripcion}
               </p>
-            </div> 
+            </div>
           </div>
         ))}
       </div>
@@ -43,7 +42,7 @@ import ofertas from "../data/ofertas.json";
 )}
 
 <style>
-  /* Estilos minimalistas */
+  /* Imagen con efecto hover */
   #ofertas img {
     transition: transform 0.3s ease;
   }
