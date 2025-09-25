@@ -3,7 +3,10 @@ import ofertas from "../data/ofertas.json";
 ---
 
 {ofertas.habilitado && (
-  <section id="ofertas" class="py-16 bg-white">
+  <section id="ofertas" class="py-16 bg-white relative">
+    {/* Línea superior */}
+    <div class="w-24 h-px bg-gray-300/50 mx-auto mb-8"></div>
+
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
       {/* Título de la sección con subrayado */}
       <div class="text-center mb-12">
@@ -11,7 +14,7 @@ import ofertas from "../data/ofertas.json";
         <div class="w-16 h-1 bg-gradient-to-r from-red-500 to-orange-500 rounded-full mx-auto"></div>
       </div>
 
-      {/* Grid de ofertas minimalista con borde y sombra */}
+      {/* Grid de ofertas */}
       <div class="flex flex-wrap gap-16 justify-center items-start">
         {ofertas.promociones.map((oferta) => (
           <div class="flex flex-col justify-center gap-6 items-center w-[360px] text-center bg-white border border-gray-200 rounded-2xl p-4 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
@@ -38,8 +41,12 @@ import ofertas from "../data/ofertas.json";
         ))}
       </div>
     </div>
+
+    {/* Línea inferior */}
+    <div class="w-24 h-px bg-gray-300/50 mx-auto mt-8"></div>
   </section>
 )}
+
 
 <style>
   /* Imagen con efecto hover */
