@@ -29,13 +29,12 @@
       "titulo": "Aires Acondicionados",
       "descripcion": "Amplia gama de equipos para el hogar: Split, Multi Split, por conductos, Ventana, Piso Cielo y Portátiles.",
       "linkText": "Más información →",
-      "heroImagen": "https://drive.google.com/thumbnail?id=1X1r0UDqytsyZNJixyYzcd5JMjypxtSvo&sz=w1920-h1080",
+      "heroImagen": "https://drive.google.com/thumbnail?id=17yT8Cp8hxwU5-q3PtUGRcL3hKWlrcz15&sz=w1920-h1080",
       "descripcionLarga": "Contamos con la más amplia gama de aires acondicionados para suplir todas sus necesidades en el hogar, tales como: Split, Multi Split, por conductos, Ventana, Piso Cielo y Portátiles.",
       "galeria": [
-        { "imagen": "https://drive.google.com/thumbnail?id=17yT8Cp8hxwU5-q3PtUGRcL3hKWlrcz15&sz=w1920-h1080", "alt": "Split muro", "titulo": "Split muro", "descripcion": "Instalación limpia" },
-        { "imagen": "https://drive.google.com/thumbnail?id=1wo8mNB5XXmfpkSXchqyyxygfxiLM4Hdw&sz=w1920-h1080", "alt": "Cassette 4 vías", "titulo": "Cassette 4 vías", "descripcion": "Cobertura uniforme" },
-        { "imagen": "https://drive.google.com/thumbnail?id=13zTfkTvBBXm1uC7g_3z_A_g79x56c-v2&sz=w1920-h1080", "alt": "Aire acondicionado piso-cielo", "titulo": "Piso-cielo", "descripcion": "Potencia y discreción" },
-        { "video": "A7lvxXcdMmw", "alt": "video", "titulo": "Reparacion de aire acondicionado", "descripcion": "" }
+        { "imagen": "https://drive.google.com/thumbnail?id=1oxTe-NU0JiBffeOvY9fqholi2HiFi0it&sz=w1920-h1080", "alt": "imagen", "titulo": "Mantención de aires acondicionados", "descripcion": "" },
+        { "imagen": "https://drive.google.com/thumbnail?id=1l3ZI_rOfhJh29CVwIHN7FSpbinV8Kxxi&sz=w1920-h1080", "alt": "imagen", "titulo": "Mantención de aires acondicionados", "descripcion": "" },
+        { "video": "A7lvxXcdMmw", "alt": "video", "titulo": "Reparación de aire acondicionado", "descripcion": "" }
       ],
       "seo": {
         "title": "Aires Acondicionados | AEMI Ingeniería",
