@@ -1,10 +1,12 @@
 ---
+import '@fontsource-variable/inter';
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import Head from "../components/Head.astro";
+import WhatsappButton from '../components/WhatsappButton.astro';
 
-const { title, description, showHero = false } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,21 +20,11 @@ const { title, description, showHero = false } = Astro.props;
   </head>
   <body class="text-slate-900">
     <Navbar />
-
-    {
-      showHero ? (
-        <main class="relative z-10">
-          <slot />
-        </main>
-      ) : (
-        <main class="relative z-10 container mx-auto px-4 py-8">
-          <slot />
-        </main>
-      )
-    }
-
+    <main class="relative z-10">
+      <slot />
+    </main>
     <Footer />
-
+    <WhatsappButton />
   </body>
 </html>
 
@@ -42,6 +34,7 @@ const { title, description, showHero = false } = Astro.props;
     margin: 0;
     width: 100%;
     min-height: 100vh;
+    font-family: 'Inter Variable', sans-serif;
   }
 </style>
 
