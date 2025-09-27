@@ -3,14 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()],
-    server: {
-      headers: {
-        '/sitemap.xml': {
-          'Content-Type': 'application/xml; charset=utf-8'
-        }
-      }
-    }
+    plugins: [tailwindcss()]
   },
-  site: 'https://aemiingenieria.cl',
+  site: 'https://aemiingenieria.cl'
 });
