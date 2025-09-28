@@ -24,13 +24,13 @@ const { contacto } = contactoData;
           class="space-y-3.5"
         >
           <div>
-            <label for="name" class="block text-xs md:text-sm font-semibold mb-1.5">
+            <label for="nombre" class="block text-xs md:text-sm font-semibold mb-1.5">
               Nombre completo:
             </label>
             <input 
               type="text" 
-              id="name" 
-              name="name" 
+              id="nombre" 
+              name="nombre" 
               required
               class="w-full px-3 py-2 rounded-lg bg-slate-50/90 text-slate-900 border-0 focus:bg-slate-50 focus:ring-4 focus:ring-[#99C9FF] transition-all duration-300 focus:outline-none text-sm"
             />
@@ -50,24 +50,24 @@ const { contacto } = contactoData;
           </div>
 
           <div>
-            <label for="phone" class="block text-xs md:text-sm font-semibold mb-1.5">
+            <label for="teléfono" class="block text-xs md:text-sm font-semibold mb-1.5">
               Teléfono (opcional):
             </label>
             <input 
               type="tel" 
-              id="phone" 
-              name="phone"
+              id="teléfono" 
+              name="teléfono"
               class="w-full px-3 py-2 rounded-lg bg-slate-50/90 text-slate-900 border-0 focus:bg-slate-50 focus:ring-4 focus:ring-[#99C9FF] transition-all duration-300 focus:outline-none text-sm"
             />
           </div>
 
           <div>
-            <label for="service" class="block text-xs md:text-sm font-semibold mb-1.5">
+            <label for="servicio" class="block text-xs md:text-sm font-semibold mb-1.5">
               Servicio de interés:
             </label>
             <select 
-              id="service" 
-              name="service"
+              id="servicio" 
+              name="servicio"
               class="w-full px-3 py-2 rounded-lg bg-slate-50/90 text-slate-900 border-0 focus:bg-slate-50 focus:ring-4 focus:ring-[#99C9FF] transition-all duration-300 focus:outline-none text-sm"
             >
               {contacto.formulario.servicios.map(servicio => (
@@ -77,12 +77,12 @@ const { contacto } = contactoData;
           </div>
 
           <div>
-            <label for="message" class="block text-xs md:text-sm font-semibold mb-1.5">
+            <label for="mensaje" class="block text-xs md:text-sm font-semibold mb-1.5">
               Mensaje:
             </label>
             <textarea 
-              id="message" 
-              name="message" 
+              id="mensaje" 
+              name="mensaje" 
               rows="3" 
               required
               class="w-full px-3 py-2 rounded-lg bg-slate-50/90 text-slate-900 border-0 focus:bg-slate-50 focus:ring-4 focus:ring-[#99C9FF] transition-all duration-300 resize-none focus:outline-none text-sm"
@@ -90,7 +90,7 @@ const { contacto } = contactoData;
           </div>
 
           <!-- Campo oculto para evitar spam -->
-          <input type="hidden" name="_subject" value="Nuevo mensaje desde CoolTech Pro">
+          <input type="hidden" name="_subject" value="Nuevo mensaje desde Aemi Ingenieria">
           <input type="hidden" name="_format" value="json">
 
           <button 
