@@ -4,12 +4,30 @@ const { contacto } = contactoData;
 ---
 
 <section id="contact" class="py-10 md:py-12 px-10 md:px-20 bg-gradient-to-br from-blue-800 to-blue-900 text-white">
+  <!-- Modal de alerta personalizada -->
+  <div id="alert-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full mx-auto transform transition-all duration-300 scale-95" id="alert-content">
+      <div class="p-6 text-center">
+        <div id="alert-icon" class="mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center text-3xl"></div>
+        <h3 id="alert-title" class="text-xl font-bold text-gray-900 mb-2"></h3>
+        <p id="alert-message" class="text-gray-600 mb-6 leading-relaxed"></p>
+        <button 
+          id="alert-close" 
+          class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold py-2.5 px-8 rounded-full transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-blue-300 cursor-pointer"
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
   <div class="text-center mb-10 md:mb-12">
     <h2 class="text-2xl md:text-3xl font-bold mb-3">{contacto.titulo}</h2>
     <p class="text-base md:text-lg text-slate-50/90 max-w-2xl mx-auto">
       {contacto.subtitulo}
     </p>
   </div>
+  
   <div class="flex justify-between items-start w-full">
     <!-- Grid principal -->
     <div class="grid lg:grid-cols-2 gap-6 md:gap-8 items-start w-full">
@@ -70,7 +88,7 @@ const { contacto } = contactoData;
               name="servicio"
               class="w-full px-3 py-2 rounded-lg bg-slate-50/90 text-slate-900 border-0 focus:bg-slate-50 focus:ring-4 focus:ring-[#99C9FF] transition-all duration-300 focus:outline-none text-sm"
             >
-              {contacto.formulario.servicios.map(servicio => (
+              {contacto.formulario.servicios.map((servicio) => (
                 <option value={servicio.valor}>{servicio.etiqueta}</option>
               ))}
             </select>
@@ -90,15 +108,17 @@ const { contacto } = contactoData;
           </div>
 
           <!-- Campo oculto para evitar spam -->
-          <input type="hidden" name="_subject" value="Nuevo mensaje desde Aemi Ingenieria">
-          <input type="hidden" name="_format" value="json">
+          <input type="hidden" name="_subject" value="Nuevo mensaje desde Aemi Ingenieria" />
+          <input type="hidden" name="_format" value="json" />
+          <input type="hidden" name="_next" value="#success" />
 
           <button 
             type="submit" 
             id="submit-btn"
-            class="w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-red-300 cursor-pointer text-sm md:text-base"
+            class="w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-red-300 cursor-pointer text-sm md:text-base disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            📧 Enviar Mensaje
+            <span id="btn-text">📧 Enviar Mensaje</span>
+            <span id="btn-loading" class="hidden">⏳ Enviando...</span>
           </button>
         </form>
       </div>
@@ -110,7 +130,7 @@ const { contacto } = contactoData;
         </div>
         
         <div class="space-y-3.5">
-          {contacto.informacion.elementos.map(elemento => (
+          {contacto.informacion.elementos.map((elemento) => (
             <div class="flex items-center gap-3 p-5 bg-white/10 backdrop-blur-lg rounded-xl border border-white/15 hover:bg-white/20 transition-all duration-300">
               <div class="text-xl w-10 h-10 bg-[#5EA0EB] rounded-lg flex items-center justify-center">
                 {elemento.icono}
@@ -119,7 +139,7 @@ const { contacto } = contactoData;
                 <h4 class="font-semibold text-base">{elemento.titulo}</h4>
                 {elemento.titulo === 'Horarios' ? (
                   <div class="text-slate-50/90 space-y-0.5 text-sm">
-                    {elemento.valor.split('\n').map(linea => (
+                    {elemento.valor.split('\n').map((linea) => (
                       <p>{linea}</p>
                     ))}
                   </div>
@@ -134,3 +154,163 @@ const { contacto } = contactoData;
     </div>
   </div>
 </section>
+
+<style>
+  /* Estilos adicionales para mejorar la experiencia móvil */
+  @media (max-width: 640px) {
+    #alert-modal {
+      padding: 1rem;
+    }
+    
+    #alert-content {
+      margin: 0;
+      max-width: 95vw;
+    }
+  }
+  
+  /* Animación suave para el modal */
+  #alert-modal {
+    transition: all 0.3s ease;
+  }
+  
+  #alert-content {
+    transition: transform 0.3s ease;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const btnText = document.getElementById('btn-text') as HTMLElement;
+    const btnLoading = document.getElementById('btn-loading') as HTMLElement;
+    const alertModal = document.getElementById('alert-modal') as HTMLElement;
+    const alertContent = document.getElementById('alert-content') as HTMLElement;
+    const alertIcon = document.getElementById('alert-icon') as HTMLElement;
+    const alertTitle = document.getElementById('alert-title') as HTMLElement;
+    const alertMessage = document.getElementById('alert-message') as HTMLElement;
+    const alertClose = document.getElementById('alert-close') as HTMLButtonElement;
+
+    // Verificar que todos los elementos existan
+    if (!form || !submitBtn || !btnText || !btnLoading || !alertModal || !alertContent || !alertIcon || !alertTitle || !alertMessage || !alertClose) {
+      console.error('Algunos elementos del DOM no fueron encontrados');
+      return;
+    }
+
+    // Función para mostrar alertas
+    function showAlert(type: string, title: string, message: string) {
+      // Configurar el contenido de la alerta según el tipo
+      if (type === 'success') {
+        alertIcon.className = 'mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center text-3xl bg-green-100 text-green-600';
+        alertIcon.textContent = '✅';
+        alertTitle.className = 'text-xl font-bold text-green-800 mb-2';
+      } else if (type === 'error') {
+        alertIcon.className = 'mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center text-3xl bg-red-100 text-red-600';
+        alertIcon.textContent = '❌';
+        alertTitle.className = 'text-xl font-bold text-red-800 mb-2';
+      } else if (type === 'warning') {
+        alertIcon.className = 'mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center text-3xl bg-yellow-100 text-yellow-600';
+        alertIcon.textContent = '⚠️';
+        alertTitle.className = 'text-xl font-bold text-yellow-800 mb-2';
+      }
+
+      alertTitle.textContent = title;
+      alertMessage.textContent = message;
+      
+      // Mostrar modal con animación
+      alertModal.classList.remove('hidden');
+      alertModal.classList.add('flex');
+      
+      // Animación de entrada
+      setTimeout(() => {
+        alertContent.classList.remove('scale-95');
+        alertContent.classList.add('scale-100');
+      }, 10);
+    }
+
+    // Función para cerrar alerta
+    function closeAlert() {
+      alertContent.classList.remove('scale-100');
+      alertContent.classList.add('scale-95');
+      
+      setTimeout(() => {
+        alertModal.classList.remove('flex');
+        alertModal.classList.add('hidden');
+      }, 300);
+    }
+
+    // Event listeners para cerrar modal
+    alertClose.addEventListener('click', closeAlert);
+    alertModal.addEventListener('click', function(e) {
+      if (e.target === alertModal) {
+        closeAlert();
+      }
+    });
+
+    // Cerrar con tecla Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !alertModal.classList.contains('hidden')) {
+        closeAlert();
+      }
+    });
+
+    // Manejar envío del formulario
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // Cambiar estado del botón a "enviando"
+      submitBtn.disabled = true;
+      btnText.classList.add('hidden');
+      btnLoading.classList.remove('hidden');
+
+      try {
+        // Crear FormData con los datos del formulario
+        const formData = new FormData(form);
+
+        // Enviar datos a Formspree
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Éxito - mostrar alerta de éxito
+          showAlert(
+            'success',
+            '¡Mensaje Enviado!',
+            'Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.'
+          );
+          
+          // Limpiar formulario
+          form.reset();
+        } else {
+          // Error del servidor
+          let errorMessage = 'Error del servidor';
+          try {
+            const errorData = await response.json();
+            errorMessage = errorData.error || errorMessage;
+          } catch {
+            // Si no se puede parsear el JSON, usar mensaje por defecto
+          }
+          throw new Error(errorMessage);
+        }
+      } catch (error) {
+        // Error de conexión o del servidor
+        console.error('Error:', error);
+        showAlert(
+          'error',
+          'Error al Enviar',
+          'Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde.'
+        );
+      } finally {
+        // Restaurar estado del botón
+        submitBtn.disabled = false;
+        btnText.classList.remove('hidden');
+        btnLoading.classList.add('hidden');
+      }
+    });
+  });
+</script>
