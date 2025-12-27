@@ -1,0 +1,299 @@
+<!-- Modal para visualizar imágenes en tamaño completo -->
+<div id="imageModal" class="image-modal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar modal">
+            <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="modal-image-container">
+            <img id="modalImage" src="" alt="" />
+        </div>
+        <div class="modal-info">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .image-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .image-modal.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .modal-backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        cursor: pointer;
+    }
+
+    .modal-content {
+        position: relative;
+        max-width: 95vw;
+        max-height: 95vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        z-index: 10;
+        transform: scale(0.9);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .image-modal.active .modal-content {
+        transform: scale(1);
+    }
+
+    .modal-close {
+        position: absolute;
+        top: -50px;
+        right: 0;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: white;
+        transition: all 0.3s ease;
+        z-index: 11;
+    }
+
+    .modal-close:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: rotate(90deg) scale(1.1);
+    }
+
+    .modal-image-container {
+        position: relative;
+        max-width: 90vw;
+        max-height: 80vh;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .modal-image-container img {
+        display: block;
+        max-width: 100%;
+        max-height: 80vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border-radius: 16px;
+    }
+
+    .modal-info {
+        text-align: center;
+        color: white;
+        max-width: 600px;
+        padding: 0 1rem;
+    }
+
+    .modal-info h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-info p {
+        font-size: 1rem;
+        opacity: 0.9;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Animación de entrada */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .modal-close {
+            top: -45px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .modal-image-container {
+            max-width: 95vw;
+            max-height: 70vh;
+        }
+
+        .modal-image-container img {
+            max-height: 70vh;
+        }
+
+        .modal-info h3 {
+            font-size: 1.25rem;
+        }
+
+        .modal-info p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .modal-close {
+            top: 10px;
+            right: 10px;
+        }
+
+        .modal-image-container {
+            border-radius: 12px;
+        }
+    }
+
+    /* Prevenir scroll cuando el modal está abierto */
+    body.modal-open {
+        overflow: hidden;
+    }
+</style>
+
+<script>
+    class ImageModal {
+        modal: HTMLElement | null;
+        modalImage: HTMLImageElement | null;
+        modalTitle: HTMLElement | null;
+        modalDescription: HTMLElement | null;
+        closeBtn: HTMLElement | null;
+        backdrop: HTMLElement | null;
+
+        constructor() {
+            this.modal = document.getElementById("imageModal");
+            this.modalImage = document.getElementById(
+                "modalImage",
+            ) as HTMLImageElement;
+            this.modalTitle = document.getElementById("modalTitle");
+            this.modalDescription = document.getElementById("modalDescription");
+            this.closeBtn = this.modal?.querySelector(".modal-close") || null;
+            this.backdrop =
+                this.modal?.querySelector(".modal-backdrop") || null;
+
+            this.init();
+        }
+
+        init() {
+            // Cerrar con el botón X
+            this.closeBtn?.addEventListener("click", () => this.close());
+
+            // Cerrar al hacer clic en el backdrop
+            this.backdrop?.addEventListener("click", () => this.close());
+
+            // Cerrar con la tecla Escape
+            document.addEventListener("keydown", (e) => {
+                if (
+                    e.key === "Escape" &&
+                    this.modal?.classList.contains("active")
+                ) {
+                    this.close();
+                }
+            });
+
+            // Escuchar eventos personalizados para abrir el modal
+            document.addEventListener("openImageModal", ((e: CustomEvent) => {
+                this.open(e.detail);
+            }) as EventListener);
+        }
+
+        open(data: {
+            src: string;
+            alt: string;
+            title?: string;
+            description?: string;
+        }) {
+            if (!this.modal || !this.modalImage) return;
+
+            this.modalImage.src = data.src;
+            this.modalImage.alt = data.alt;
+
+            if (this.modalTitle) {
+                this.modalTitle.textContent = data.title || "";
+                this.modalTitle.style.display = data.title ? "block" : "none";
+            }
+
+            if (this.modalDescription) {
+                this.modalDescription.textContent = data.description || "";
+                this.modalDescription.style.display = data.description
+                    ? "block"
+                    : "none";
+            }
+
+            this.modal.classList.add("active");
+            this.modal.setAttribute("aria-hidden", "false");
+            document.body.classList.add("modal-open");
+        }
+
+        close() {
+            if (!this.modal) return;
+
+            this.modal.classList.remove("active");
+            this.modal.setAttribute("aria-hidden", "true");
+            document.body.classList.remove("modal-open");
+
+            // Limpiar la imagen después de la animación
+            setTimeout(() => {
+                if (this.modalImage) {
+                    this.modalImage.src = "";
+                }
+            }, 300);
+        }
+    }
+
+    // Inicializar el modal cuando el DOM esté listo
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", () => {
+            new ImageModal();
+        });
+    } else {
+        new ImageModal();
+    }
+</script>

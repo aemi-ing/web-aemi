@@ -1,4 +1,6 @@
 ---
+import ImageModal from './ImageModal.astro';
+
 export interface Props {
   titulo: string;
   descripcion?: string;
@@ -33,9 +35,13 @@ const { titulo, descripcion, linkVideo, items } = Astro.props as Props;
                 <img
                   src={it.imagen}
                   alt={it.alt ?? it.titulo ?? 'Imagen del servicio'}
-                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+                  class="gallery-image absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05] cursor-pointer"
                   loading="lazy"
                   decoding="async"
+                  data-image-src={it.imagen}
+                  data-image-alt={it.alt ?? it.titulo ?? 'Imagen del servicio'}
+                  data-image-title={it.titulo ?? ''}
+                  data-image-description={it.descripcion ?? ''}
                 />
               </div>
             )}
@@ -58,6 +64,8 @@ const { titulo, descripcion, linkVideo, items } = Astro.props as Props;
     </div>
   </div>
 </section>
+
+<ImageModal />
 
 <style>
   /* Aparición: fade + slide-up */
@@ -113,6 +121,36 @@ const { titulo, descripcion, linkVideo, items } = Astro.props as Props;
   })();
 </script>
 
+
 <script>
 import '@justinribeiro/lite-youtube';
+</script>
+
+<script>
+  // Manejar clics en las imágenes de la galería
+  document.addEventListener('DOMContentLoaded', () => {
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    
+    galleryImages.forEach((img) => {
+      img.addEventListener('click', (e) => {
+        const target = e.currentTarget as HTMLElement;
+        const src = target.getAttribute('data-image-src');
+        const alt = target.getAttribute('data-image-alt');
+        const title = target.getAttribute('data-image-title');
+        const description = target.getAttribute('data-image-description');
+
+        if (src) {
+          const event = new CustomEvent('openImageModal', {
+            detail: {
+              src,
+              alt: alt || '',
+              title: title || '',
+              description: description || ''
+            }
+          });
+          document.dispatchEvent(event);
+        }
+      });
+    });
+  });
 </script>
