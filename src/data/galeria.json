@@ -1,6 +1,6 @@
 {
   "titulo": "Nuestra Galería",
-  "descripcion": "Conoce algunos de nuestros proyectos más destacados en refrigeración, climatización y electricidad.",
+  "descripcion": "Conoce algunos de nuestros proyectos más destacados y nuestra infraestructura.",
   "slides": [
     {
       "imagen": "https://drive.google.com/thumbnail?id=1PZm7MEScULPpV9Z9qeOCIlhR6C_O1wRt&sz=w1920-h1080",
@@ -13,12 +13,6 @@
       "alt": "Aire acondicionado",
       "titulo": "Mantención de aire acondicionado industrial",
       "descripcion": "Mantención preventiva y correctiva de aire acondicionado industrial"
-    },
-    {
-      "imagen": "https://drive.google.com/thumbnail?id=1HSgX-ncLOyiHRL8j4tIaVZWczR5X8zSJ&sz=w1920-h1080",
-      "alt": "Tablero eléctrico",
-      "titulo": "Instalaciones Eléctricas",
-      "descripcion": "Reparación y mantenimiento de tableros eléctricos industriales"
     },
     {
       "imagen": "https://drive.google.com/thumbnail?id=12TjkZIzXKU_Xcz5RuAwoiiZFLJ0itikk&sz=w1920-h1080",
