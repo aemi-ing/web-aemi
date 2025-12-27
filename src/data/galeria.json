@@ -9,19 +9,13 @@
       "descripcion": "Instalación y mantenimiento de cámaras frigoríficas comerciales"
     },
     {
-      "imagen": "https://drive.google.com/thumbnail?id=1sq92V-ueEYkgrZxQVdzK06k-eJDkbMBi&sz=w1920-h1080",
-      "alt": "Reparación de aire acondicionado",
-      "titulo": "Aires Acondicionados",
-      "descripcion": "Reparación y mantenimiento de sistemas de climatización"
+      "imagen": "https://drive.google.com/thumbnail?id=1ghrQ1785OIvMUuyFI4J-i4nKPUASdL5g&sz=w1920-h1080",
+      "alt": "Aire acondicionado",
+      "titulo": "Mantención de aire acondicionado industrial",
+      "descripcion": "Mantención preventiva y correctiva de aire acondicionado industrial"
     },
     {
-      "imagen": "https://drive.google.com/thumbnail?id=1zMepFM4ohUWONzp3Vi1CRp_tU-8MqAqF&sz=w1920-h1080",
-      "alt": "Sala de calefacción",
-      "titulo": "Climatización Industrial",
-      "descripcion": "Sala de calefacción con calderas para sistemas industriales"
-    },
-    {
-      "imagen": "https://drive.google.com/thumbnail?id=1hQ-HtyJCnhPkZlFCiMAG3OoAP_bvz-Aw&sz=w1920-h1080",
+      "imagen": "https://drive.google.com/thumbnail?id=1HSgX-ncLOyiHRL8j4tIaVZWczR5X8zSJ&sz=w1920-h1080",
       "alt": "Tablero eléctrico",
       "titulo": "Instalaciones Eléctricas",
       "descripcion": "Reparación y mantenimiento de tableros eléctricos industriales"
@@ -37,18 +31,6 @@
       "alt": "Vehículo de la empresa",
       "titulo": "Infraestructura",
       "descripcion": "Vehículo utilizado por la empresa para servicios"
-    },
-    {
-      "imagen": "https://drive.google.com/thumbnail?id=1_XsPMfDyiL2G6_c7pOirO-v2609XDAU9&sz=w1920-h1080",
-      "alt": "Vehículo de la empresa",
-      "titulo": "Infraestructura",
-      "descripcion": "Vehículo utilizado por la empresa para servicios"
-    },
-    {
-      "imagen": "https://drive.google.com/thumbnail?id=1P3-B3ePNmI6HiOmlCcCBeNhDgXD3H3R8&sz=w1920-h1080",
-      "alt": "Trabajo sobre andamios",
-      "titulo": "Trabajo sobre andamios",
-      "descripcion": "Instalación y mantenimiento en altura con equipos de seguridad certificados"
     }
   ]
 }
