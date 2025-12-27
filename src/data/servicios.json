@@ -148,11 +148,23 @@
           "alt": "",
           "titulo": "Sala de calefacción (Calderas)",
           "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=17dg5AEH3Tsvr-SQkuSD5rSCeSTaXFchy&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Estanque acumulador de agua",
+          "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1fMCpztJ1zbRmuqnSyg0IBlFQw5cOmR6x&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Estanque acumulador de agua",
+          "descripcion": ""
         }
       ],
       "seo": {
-        "title": "Electricidad | AEMI Ingeniería",
-        "description": "Instalaciones y mantenimiento eléctrico profesional."
+        "title": "Climatización | AEMI Ingeniería",
+        "description": "Instalación y mantenimiento de climatización."
       }
     },
     {
