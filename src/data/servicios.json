@@ -11,17 +11,67 @@
       "heroImagen": "https://drive.google.com/thumbnail?id=134Jurj0W6oQBBC_WuGgX8l7t3sGz5_jz&sz=w1920-h1080",
       "descripcionLarga": "Instalamos, mantenemos y reparamos sistemas de refrigeración comercial e industrial. Optimizamos consumo energético, aseguramos la cadena de frío y cumplimos normativas.",
       "galeria": [
-        { "imagen": "https://drive.google.com/thumbnail?id=1nM4LIaGH7B2DOYPpRZ9OfPoCFsrhv61H&sz=w1920-h1080", "alt": "", "titulo": "Conservadora de alimentos", "descripcion": "" },
-        { "imagen": "https://drive.google.com/thumbnail?id=1jfIt5swcNPGuwXaFPPRXjUxbStP8vAeq&sz=w1920-h1080", "alt": "", "titulo": "Regrigerador antiguo", "descripcion": "" },
-        { "imagen": "https://drive.google.com/thumbnail?id=16jcML91zvxIdc1rbcapIrV4f_I_b02ek&sz=w1920-h1080", "alt": "", "titulo": "Congeladora horizontal", "descripcion": "" },
-        { "imagen": "https://drive.google.com/thumbnail?id=1PZm7MEScULPpV9Z9qeOCIlhR6C_O1wRt&sz=w1920-h1080", "alt": "", "titulo": "Cámara frigorífica", "descripcion": "" },
-        {"imagen": "https://drive.google.com/thumbnail?id=1GnEbpPaOtaX_hRhv2CMMYYABmJbD14uk&sz=w1920-h1080", "alt": "", "titulo": "Conservadores verticales", "descripcion": "" },
-        {"imagen": "https://drive.google.com/thumbnail?id=1Bu9fUvSPbZKors_S_VV6h5DYBDY9Wy-1&sz=w1920-h1080", "alt": "", "titulo": "Reparación de sistema de refrigeración", "descripcion": "" },
-        {"imagen": "https://drive.google.com/thumbnail?id=1K5dp14PiQ9Mewfw0arK252yh7wXal0y6&sz=w1920-h1080", "alt": "", "titulo": "Refrigerador dos puertas", "descripcion": "" },
-        {"imagen": "https://drive.google.com/thumbnail?id=1mzy_aO2tyJFXSG5uUUA7zHmIXY_3JqV2&sz=w1920-h1080", "alt": "", "titulo": "Refrigerador dos puertas ", "descripcion": "" }
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1nM4LIaGH7B2DOYPpRZ9OfPoCFsrhv61H&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Conservadora de alimentos",
+          "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1jfIt5swcNPGuwXaFPPRXjUxbStP8vAeq&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Regrigerador antiguo",
+          "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=16jcML91zvxIdc1rbcapIrV4f_I_b02ek&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Congeladora horizontal",
+          "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1PZm7MEScULPpV9Z9qeOCIlhR6C_O1wRt&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Cámara frigorífica",
+          "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1GnEbpPaOtaX_hRhv2CMMYYABmJbD14uk&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Conservadores verticales",
+          "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1Bu9fUvSPbZKors_S_VV6h5DYBDY9Wy-1&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Reparación de sistema de refrigeración",
+          "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1K5dp14PiQ9Mewfw0arK252yh7wXal0y6&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Refrigerador dos puertas",
+          "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1mzy_aO2tyJFXSG5uUUA7zHmIXY_3JqV2&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Refrigerador dos puertas",
+          "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1nxjEzLNkF5Dx44VfYwex3EB-fSmzlH_u&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Reparación congeladora horizontal",
+          "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1hRC1RMJKSe1eNO6XgrQgEopmgBEKKILD&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Reparación congeladora horizontal",
+          "descripcion": ""
+        }
       ],
-
-
       "seo": {
         "title": "Refrigeración | AEMI Ingeniería",
         "description": "Instalación y mantención de sistemas de refrigeración comercial e industrial."
@@ -36,9 +86,24 @@
       "heroImagen": "https://drive.google.com/thumbnail?id=1iMIY594FCsX10bizFtCsA5fet-F_3iL_&sz=w1920-h1080",
       "descripcionLarga": "Contamos con la más amplia gama de aires acondicionados para suplir todas sus necesidades en el hogar, tales como: Split, Multi Split, por conductos, Ventana, Piso Cielo y Portátiles.",
       "galeria": [
-        { "imagen": "https://drive.google.com/thumbnail?id=1oxTe-NU0JiBffeOvY9fqholi2HiFi0it&sz=w1920-h1080", "alt": "imagen", "titulo": "Mantención de aires acondicionados", "descripcion": "" },
-        { "imagen": "https://drive.google.com/thumbnail?id=1l3ZI_rOfhJh29CVwIHN7FSpbinV8Kxxi&sz=w1920-h1080", "alt": "imagen", "titulo": "Mantención de aires acondicionados", "descripcion": "" },
-        { "video": "A7lvxXcdMmw", "alt": "video", "titulo": "Reparación de aire acondicionado", "descripcion": "" }
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1oxTe-NU0JiBffeOvY9fqholi2HiFi0it&sz=w1920-h1080",
+          "alt": "imagen",
+          "titulo": "Mantención de aires acondicionados",
+          "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1l3ZI_rOfhJh29CVwIHN7FSpbinV8Kxxi&sz=w1920-h1080",
+          "alt": "imagen",
+          "titulo": "Mantención de aires acondicionados",
+          "descripcion": ""
+        },
+        {
+          "video": "A7lvxXcdMmw",
+          "alt": "video",
+          "titulo": "Reparación de aire acondicionado",
+          "descripcion": ""
+        }
       ],
       "seo": {
         "title": "Aires Acondicionados | AEMI Ingeniería",
@@ -54,7 +119,12 @@
       "heroImagen": "https://drive.google.com/thumbnail?id=1RbbllDQbtIzc35oK-RCsDirIIevDF-hd&sz=w1920-h1080",
       "descripcionLarga": "Ofrecemos equipos para la industria, tales como: Aire Acondicionado industrial Chillers, Fancoil y Aire acondicionado industrial con refrigerante variable VRV, además de Calderas.",
       "galeria": [
-        { "imagen": "https://drive.google.com/thumbnail?id=1zMepFM4ohUWONzp3Vi1CRp_tU-8MqAqF&sz=w1920-h1080", "alt": "", "titulo": "Sala de calefacción (Calderas)", "descripcion": "" }
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1zMepFM4ohUWONzp3Vi1CRp_tU-8MqAqF&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Sala de calefacción (Calderas)",
+          "descripcion": ""
+        }
       ],
       "seo": {
         "title": "Electricidad | AEMI Ingeniería",
@@ -70,10 +140,30 @@
       "heroImagen": "https://drive.google.com/thumbnail?id=1LzbwJtz5pkq3oxcdI2Rn4eeUzZ_UeU2C&sz=w1920-h1080",
       "descripcionLarga": "Proyectos eléctricos domiciliarios e industriales: canalizaciones, tableros, protecciones, iluminación y certificaciones.",
       "galeria": [
-        { "imagen": "https://drive.google.com/thumbnail?id=1hQ-HtyJCnhPkZlFCiMAG3OoAP_bvz-Aw&sz=w1920-h1080", "alt": "", "titulo": "Reparacion de tablero electrico", "descripcion": "" },
-        { "imagen": "https://drive.google.com/thumbnail?id=1lCobUTg2nez8ki5Fp3lfeW9UNxFkrT5M&sz=w1920-h1080", "alt": "", "titulo": "Sala de bombas de agua", "descripcion": "" },
-        { "imagen": "https://drive.google.com/thumbnail?id=10X7jf55TD_CeRC0A7dYa_nm8Q1RFCjUe&sz=w1920-h1080", "alt": "", "titulo": "Tablero eléctrico", "descripcion": "" },
-        { "imagen": "https://drive.google.com/thumbnail?id=1l8Jqq_hn3G6iT8AVoo_GDsKsJ-1XrR7i&sz=w1920-h1080   ", "alt": "", "titulo": "Temporizador eléctrico digital", "descripcion": "" }
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1hQ-HtyJCnhPkZlFCiMAG3OoAP_bvz-Aw&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Reparacion de tablero electrico",
+          "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1lCobUTg2nez8ki5Fp3lfeW9UNxFkrT5M&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Sala de bombas de agua",
+          "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=10X7jf55TD_CeRC0A7dYa_nm8Q1RFCjUe&sz=w1920-h1080",
+          "alt": "",
+          "titulo": "Tablero eléctrico",
+          "descripcion": ""
+        },
+        {
+          "imagen": "https://drive.google.com/thumbnail?id=1l8Jqq_hn3G6iT8AVoo_GDsKsJ-1XrR7i&sz=w1920-h1080   ",
+          "alt": "",
+          "titulo": "Temporizador eléctrico digital",
+          "descripcion": ""
+        }
       ],
       "seo": {
         "title": "Electricidad | AEMI Ingeniería",
