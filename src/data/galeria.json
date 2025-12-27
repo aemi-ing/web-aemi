@@ -3,40 +3,52 @@
   "descripcion": "Conoce algunos de nuestros proyectos más destacados en refrigeración, climatización y electricidad.",
   "slides": [
     {
-      "imagen": "https://drive.google.com/thumbnail?id=1jACdByecBb8tAlJl89DJ4IlK8mwtFzG2&sz=w1920-h1080",
-      "alt": "Sistema de refrigeración comercial",
-      "titulo": "Congeladora Horizontal",
-      "descripcion": "Reparacion de una congeladora horizontal"
+      "imagen": "https://drive.google.com/thumbnail?id=1PZm7MEScULPpV9Z9qeOCIlhR6C_O1wRt&sz=w1920-h1080",
+      "alt": "Cámara frigorífica",
+      "titulo": "Refrigeración Industrial",
+      "descripcion": "Instalación y mantenimiento de cámaras frigoríficas comerciales"
     },
     {
-      "imagen": "https://drive.google.com/thumbnail?id=1oxTe-NU0JiBffeOvY9fqholi2HiFi0it&sz=w1920-h1080",
-      "alt": "Aire acondicionado industrial",
-      "titulo": "Mantención de aires acondicionados",
-      "descripcion": "Parte del proceso de mantención de un aire acondicionado"
-    },
-    {
-      "imagen": "https://drive.google.com/thumbnail?id=1LzbwJtz5pkq3oxcdI2Rn4eeUzZ_UeU2C&sz=w1920-h1080",
-      "alt": "Instalación eléctrica",
-      "titulo": "Instalación Eléctrica Especializada",
-      "descripcion": "Sistemas eléctricos para equipos de refrigeración y climatización"
-    },
-    {
-      "imagen": "https://drive.google.com/thumbnail?id=1X1r0UDqytsyZNJixyYzcd5JMjypxtSvo&sz=w1920-h1080",
-      "alt": "Mantenimiento preventivo",
-      "titulo": "Mantenimiento Preventivo",
-      "descripcion": "Servicios técnicos especializados para garantizar el óptimo funcionamiento"
-    },
-    {
-      "imagen": "https://drive.google.com/thumbnail?id=1iMIY594FCsX10bizFtCsA5fet-F_3iL_&sz=w1920-h1080",
-      "alt": "Aires acondicionados",
+      "imagen": "https://drive.google.com/thumbnail?id=1sq92V-ueEYkgrZxQVdzK06k-eJDkbMBi&sz=w1920-h1080",
+      "alt": "Reparación de aire acondicionado",
       "titulo": "Aires Acondicionados",
-      "descripcion": "Instalación de sistemas de climatización para oficinas y comercios"
+      "descripcion": "Reparación y mantenimiento de sistemas de climatización"
     },
     {
-      "imagen": "https://drive.google.com/thumbnail?id=1NH5wI1G9xO3WfDYu3rvt6Mtu_0sFqXpS&sz=w1920-h1080",
-      "alt": "Automovil de la empresa",
-      "titulo": "Infraestructura ",
-      "descripcion": "Automovil utilizado por la empresa para servicios"
+      "imagen": "https://drive.google.com/thumbnail?id=1zMepFM4ohUWONzp3Vi1CRp_tU-8MqAqF&sz=w1920-h1080",
+      "alt": "Sala de calefacción",
+      "titulo": "Climatización Industrial",
+      "descripcion": "Sala de calefacción con calderas para sistemas industriales"
+    },
+    {
+      "imagen": "https://drive.google.com/thumbnail?id=1hQ-HtyJCnhPkZlFCiMAG3OoAP_bvz-Aw&sz=w1920-h1080",
+      "alt": "Tablero eléctrico",
+      "titulo": "Instalaciones Eléctricas",
+      "descripcion": "Reparación y mantenimiento de tableros eléctricos industriales"
+    },
+    {
+      "imagen": "https://drive.google.com/thumbnail?id=12TjkZIzXKU_Xcz5RuAwoiiZFLJ0itikk&sz=w1920-h1080",
+      "alt": "Vehículo de la empresa",
+      "titulo": "Infraestructura",
+      "descripcion": "Vehículo utilizado por la empresa para servicios"
+    },
+    {
+      "imagen": "https://drive.google.com/thumbnail?id=17zohuA1K5MLaYV3LNLQoN0VoOHx3cVHc&sz=w1920-h1080",
+      "alt": "Vehículo de la empresa",
+      "titulo": "Infraestructura",
+      "descripcion": "Vehículo utilizado por la empresa para servicios"
+    },
+    {
+      "imagen": "https://drive.google.com/thumbnail?id=1_XsPMfDyiL2G6_c7pOirO-v2609XDAU9&sz=w1920-h1080",
+      "alt": "Vehículo de la empresa",
+      "titulo": "Infraestructura",
+      "descripcion": "Vehículo utilizado por la empresa para servicios"
+    },
+    {
+      "imagen": "https://drive.google.com/thumbnail?id=1P3-B3ePNmI6HiOmlCcCBeNhDgXD3H3R8&sz=w1920-h1080",
+      "alt": "Trabajo sobre andamios",
+      "titulo": "Trabajo sobre andamios",
+      "descripcion": "Instalación y mantenimiento en altura con equipos de seguridad certificados"
     }
   ]
 }
